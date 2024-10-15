@@ -1,0 +1,44 @@
+<!-- 项目经验组件模板 -->
+<view class='project-item'>
+  <view class='project-title'>
+    <view></view>
+    <text>{{projectNum}}</text>
+    <view></view>
+  </view>
+
+  <view class='project-box'>
+    <text class='project-name'>{{projectName}}</text>
+    <view class='detail' wx:for="{{projectTypes}}">
+      <text class="tag">{{item}}</text>
+    </view>
+    <view>
+      <text class='project-subname'>项目描述：</text>
+      <view class='explain'>
+        <text>{{projectDesc}}</text>
+      </view>
+    </view>
+    <view>
+      <text class='project-subname'>业绩：</text>
+      <view class='explain' wx:for="{{achievements}}">
+        <text>{{index + 1}}. {{item}}</text>
+      </view>
+    </view>
+    <view>
+      <text class='project-subname'>技术栈：</text>
+      <!-- <view class='explain1'> -->
+        <!-- <text>{{skillDesc}}</text> -->
+        <view class='detail' wx:for="{{skillDescs}}">
+          <text class="tag1">{{item}}</text>
+        </view>
+      <!-- </view> -->
+      <view></view>
+    </view>
+    <!-- <view>
+      <text class='project-subname'>责任描述：</text>
+      <view class='explain' wx:for="{{responsibilityDesc}}">
+        <text>{{item}}</text>
+      </view>
+      <view></view>
+    </view> -->
+  </view>
+</view>

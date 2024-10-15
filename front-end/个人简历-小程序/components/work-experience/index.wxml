@@ -1,0 +1,14 @@
+<!-- 工作经历组件模板 -->
+<view class='experience-item'>
+  <text class='experience-name'>{{companyName}}</text>
+  <view class='experience-subname'>
+    <text>{{position}}</text>
+    <text class='date-ranges'>{{dateRanges}}</text>
+  </view>
+  <view class='explain' wx:for="{{explains}}">
+    <view>● {{item}}</view>
+  </view>
+  <view class='explain' wx:if="{{explain != ''}}">
+    <text>{{explain}}</text>
+  </view>
+</view>
